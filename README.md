@@ -46,7 +46,7 @@ Configuration cfg=new Configuration.Builder()
 and copy this into your `libs` directory.
 -   [`NineOldAndroid-2.4.0`](https://github.com/daimajia/AndroidViewAnimations/releases/download/v1.0.6/NineOldAndroid-2.4.0.jar)
 
--   [`NiftyNotification-1.0`](https://github.com/sd6352051/NiftyNotification/blob/master/releases/niftynotification-1.0.jar)
+-   [`NiftyNotification-1.0`](https://github.com/sd6352051/NiftyNotification/blob/master/releases/niftynotification-1.0.jar?raw=true)
 
 # License
 Copyright 2014 gitonway.
