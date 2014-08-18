@@ -37,7 +37,7 @@ public class MainActivity extends Activity {
 
 
         NiftyNotificationView.build(this,msg, effect,R.id.mLyout)
-                //You must call this method if you uesd ThumbSlider effect
+                //You must call this method if you use ThumbSlider effect
                 .setIcon(R.drawable.lion)
                 .show();
 
@@ -46,26 +46,26 @@ public class MainActivity extends Activity {
 //        You can configure like this
 //        The default
 
-//        Configuration cfg=new Configuration.Builder()
-//                .setAnimDuration(700)
-//                .setDispalyDuration(1500)
-//                .setBackgroundColor("#FFBDC3C7")
-//                .setTextColor("#FF444444")
-//                .setIconBackgroundColor("#FFFFFFFF")
-//                .setTextPadding(5)                      //dp
-//                .setViewMaxHeight(48)                   //dp
-//                .setTextGravity(Gravity.CENTER)         //only text def  Gravity.CENTER,contain icon Gravity.CENTER_VERTICAL
-//                .build();
-//
-//        NiftyNotificationView.build(this,msg, effect,R.id.mLyout,cfg)
-//                .setIcon(R.drawable.lion)               //remove this line ,only text
-//                .setOnClickListener(new View.OnClickListener() {
-//                    @Override
-//                    public void onClick(View view) {
-//                        //add your code
-//                    }
-//                })
-//                .show();
+        Configuration cfg=new Configuration.Builder()
+                .setAnimDuration(700)
+                .setDispalyDuration(1500)
+                .setBackgroundColor("#FFBDC3C7")
+                .setTextColor("#FF444444")
+                .setIconBackgroundColor("#FFFFFFFF")
+                .setTextPadding(5)                      //dp
+                .setViewMaxHeight(48)                   //dp
+                .setTextGravity(Gravity.CENTER)         //only text def  Gravity.CENTER,contain icon Gravity.CENTER_VERTICAL
+                .build();
+
+        NiftyNotificationView.build(this,msg, effect,R.id.mLyout,cfg)
+                .setIcon(R.drawable.lion)               //remove this line ,only text
+                .setOnClickListener(new View.OnClickListener() {
+                    @Override
+                    public void onClick(View view) {
+                        //add your code
+                    }
+                })
+                .show();
     }
 
 }
