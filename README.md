@@ -48,6 +48,10 @@ and copy this into your `libs` directory.
 
 -   [`NiftyNotification-1.0`](https://github.com/sd6352051/NiftyNotification/blob/master/releases/niftynotification-1.0.jar?raw=true)
 
+  
+# Effects
+`Flip`, `Jelly`, `Scale`, `SlideIn`, `SlideOnTop`, `Standard`, `ThumbSlider`
+
 # License
 Copyright 2014 gitonway.
 
