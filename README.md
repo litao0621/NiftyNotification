@@ -20,25 +20,25 @@ effects for android notifications.base on ([Crouton][1])
 
 ``` java
 Configuration cfg=new Configuration.Builder()
-                .setAnimDuration(700)
-                .setDispalyDuration(1500)
-                .setBackgroundColor("#FFBDC3C7")
-                .setTextColor("#FF444444")
-                .setIconBackgroundColor("#FFFFFFFF")
-                .setTextPadding(5)                      //dp
-                .setViewMaxHeight(48)                   //dp
-                .setTextGravity(Gravity.CENTER)         //only text def  Gravity.CENTER,contain icon Gravity.CENTER_VERTICAL
-                .build();
+      .setAnimDuration(700)
+      .setDispalyDuration(1500)
+      .setBackgroundColor("#FFBDC3C7")
+      .setTextColor("#FF444444")
+      .setIconBackgroundColor("#FFFFFFFF")
+      .setTextPadding(5)                      //dp
+      .setViewMaxHeight(48)                   //dp
+      .setTextGravity(Gravity.CENTER)         //only text def  Gravity.CENTER,contain icon Gravity.CENTER_VERTICAL
+      .build();
 
-        NiftyNotificationView.build(this,msg, effect,R.id.mLyout,cfg)
-                .setIcon(R.drawable.lion)               //remove this line ,only text
-                .setOnClickListener(new View.OnClickListener() {
-                    @Override
-                    public void onClick(View view) {
-                        //add your code
-                    }
-                })
-                .show();
+NiftyNotificationView.build(this,msg, effect,R.id.mLyout,cfg)
+      .setIcon(R.drawable.lion)               //remove this line ,only text
+      .setOnClickListener(new View.OnClickListener() {
+      @Override
+      public void onClick(View view) {
+      //add your code
+      }
+      })
+      .show();
 
 ```
 
