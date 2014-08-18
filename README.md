@@ -12,8 +12,7 @@ effects for android notifications.base on ([Crouton][1])
 # Usage
 ``` java
   NiftyNotificationView.build(this,msg, effect,R.id.mLyout)
-      //You must call this method if you use ThumbSlider effect
-      .setIcon(R.drawable.lion)
+      .setIcon(R.drawable.lion)    //You must call this method if you use ThumbSlider effect
       show();
 
 ```
