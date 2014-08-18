@@ -37,8 +37,7 @@ public class MainActivity extends Activity {
 
 
         NiftyNotificationView.build(this,msg, effect,R.id.mLyout)
-                //You must call this method if you uesd ThumbSlider effect
-                .setIcon(R.drawable.lion)
+                .setIcon(R.drawable.lion)         //You must call this method if you use ThumbSlider effect
                 .show();
 
 
