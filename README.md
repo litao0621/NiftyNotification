@@ -16,6 +16,20 @@ effects for android notifications.base on ([Crouton][1])
       show();
 
 ```
+#
+
+```xml
+
+<!-- ViewGroup-->
+<RelativeLayout
+      android:id="@+id/mLyout"
+      android:layout_width="match_parent"
+      android:layout_height="match_parent"
+      >
+
+</RelativeLayout>
+```
+
 # Configuration
 
 ``` java
