@@ -41,7 +41,7 @@ Configuration cfg=new Configuration.Builder()
       .setIconBackgroundColor("#FFFFFFFF")
       .setTextPadding(5)                      //dp
       .setViewHeight(48)                      //dp
-      .setTextLines(2)
+      .setTextLines(2)                        //You had better use setViewHeight and setTextLines together
       .setTextGravity(Gravity.CENTER)         //only text def  Gravity.CENTER,contain icon Gravity.CENTER_VERTICAL
       .build();
 
