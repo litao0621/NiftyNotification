@@ -208,18 +208,20 @@ public class NiftyNotificationView {
 
     private TextView initializeTextView() {
         int padding = px2dip(this.configuration.textPadding);
+        int viewHeight = px2dip(this.configuration.viewHeight);
         TextView text = new TextView(this.activity);
-        text.setMaxHeight(px2dip(this.configuration.viewMaxHeight));
+        text.setMaxHeight(viewHeight);
+        text.setMaxHeight(viewHeight);
         text.setId(TEXT_ID);
         text.setText(this.text);
-        text.setMaxLines(2);
+        text.setMaxLines(this.configuration.textLines);
         text.setEllipsize(TextUtils.TruncateAt.END);
         text.setPadding(padding*2, padding, padding*2, padding);
         text.setTextColor(Color.parseColor(this.configuration.textColor));
         text.setBackgroundColor(Color.parseColor(this.configuration.backgroundColor));
 
         if ((null != iconDrawable) || (0 != iconRes)) {
-            text.setMinHeight(px2dip(this.configuration.viewMaxHeight));
+            text.setMinHeight(viewHeight);
             text.setGravity(isDefault?Gravity.CENTER_VERTICAL:this.configuration.textGravity);
         }else {
             text.setGravity(isDefault?Gravity.CENTER:this.configuration.textGravity);
@@ -227,7 +229,7 @@ public class NiftyNotificationView {
         return text;
     }
     private ImageView initializeImageView() {
-        int maxValue=px2dip(this.configuration.viewMaxHeight);
+        int maxValue=px2dip(this.configuration.viewHeight);
         ImageView image = new ImageView(this.activity);
         image.setMinimumHeight(maxValue);
         image.setMinimumWidth(maxValue);

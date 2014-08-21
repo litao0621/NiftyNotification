@@ -32,11 +32,13 @@ public class Configuration {
 
     final String backgroundColor;
 
-    final int viewMaxHeight;
+    final int viewHeight;
 
     final String iconBackgroundColor;
 
     final int textGravity;
+
+    final int textLines;
 
     final int textPadding;
     private Configuration(final Builder builder) {
@@ -45,9 +47,10 @@ public class Configuration {
         this.dispalyDuration=builder.dispalyDuration;
         this.backgroundColor=builder.backgroundColor;
         this.textPadding=builder.textPadding;
-        this.viewMaxHeight=builder.viewMaxHeight;
+        this.viewHeight=builder.viewHeight;
         this.iconBackgroundColor=builder.iconBackgroundColor;
         this.textGravity=builder.textGravity;
+        this.textLines=builder.textLines;
     }
 
     public static class Builder {
@@ -62,11 +65,13 @@ public class Configuration {
 
         private int textPadding;
 
-        private int viewMaxHeight;
+        private int viewHeight;
 
         private String iconBackgroundColor;
 
         private int textGravity;
+
+        private int textLines;
 
         public Builder() {
             animDuration=ANIM_DURATION;
@@ -74,18 +79,20 @@ public class Configuration {
             textColor="#FF444444";
             backgroundColor="#FFBDC3C7";
             textPadding=5;
-            viewMaxHeight=48;
+            viewHeight=48;
             iconBackgroundColor="#FFFFFFFF";
             textGravity= Gravity.CENTER;
+            textLines=2;
         }
         public Builder(final Configuration baseStyle) {
             animDuration=baseStyle.animDuration;
             textColor=baseStyle.textColor;
             backgroundColor=baseStyle.backgroundColor;
             textPadding=baseStyle.textPadding;
-            viewMaxHeight=baseStyle.viewMaxHeight;
+            viewHeight=baseStyle.viewHeight;
             iconBackgroundColor=baseStyle.iconBackgroundColor;
             textGravity=baseStyle.textGravity;
+            textLines=baseStyle.textLines;
         }
 
 
@@ -114,8 +121,8 @@ public class Configuration {
             return this;
         }
 
-        public Builder setViewMaxHeight(int viewMaxHeight){
-            this.viewMaxHeight=viewMaxHeight;
+        public Builder setViewHeight(int viewHeight){
+            this.viewHeight=viewHeight;
             return this;
         }
 
@@ -126,6 +133,10 @@ public class Configuration {
 
         public Builder setTextGravity(int textGravity){
             this.textGravity=textGravity;
+            return this;
+        }
+        public Builder setTextLines(int textLines){
+            this.textLines=textLines;
             return this;
         }
 
