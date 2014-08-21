@@ -40,7 +40,8 @@ Configuration cfg=new Configuration.Builder()
       .setTextColor("#FF444444")
       .setIconBackgroundColor("#FFFFFFFF")
       .setTextPadding(5)                      //dp
-      .setViewMaxHeight(48)                   //dp
+      .setViewHeight(48)                      //dp
+      .setTextLines(2)
       .setTextGravity(Gravity.CENTER)         //only text def  Gravity.CENTER,contain icon Gravity.CENTER_VERTICAL
       .build();
 
