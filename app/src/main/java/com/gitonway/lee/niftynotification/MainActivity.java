@@ -52,7 +52,8 @@ public class MainActivity extends Activity {
 //                .setTextColor("#FF444444")
 //                .setIconBackgroundColor("#FFFFFFFF")
 //                .setTextPadding(5)                      //dp
-//                .setViewMaxHeight(48)                   //dp
+//                .setViewHeight(48)                      //dp
+//                .setTextLines(2)                        //You had better use setViewHeight and setTextLines together
 //                .setTextGravity(Gravity.CENTER)         //only text def  Gravity.CENTER,contain icon Gravity.CENTER_VERTICAL
 //                .build();
 //
