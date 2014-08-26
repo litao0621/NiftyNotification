@@ -57,8 +57,8 @@ public class Manager extends Handler {
         return INSTANCE;
     }
 
-    void add(NiftyNotificationView crouton) {
-        if (notifyQueue.size() < 1) {
+    void add(NiftyNotificationView crouton,boolean isRepeat ) {
+        if (notifyQueue.size() < 1||isRepeat) {
             notifyQueue.add(crouton);
             displayNotify();
         }

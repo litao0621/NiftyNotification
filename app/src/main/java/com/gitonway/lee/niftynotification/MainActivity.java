@@ -65,7 +65,7 @@ public class MainActivity extends Activity {
 //                        //add your code
 //                    }
 //                })
-//                .show();
+//                .show();                               //  show(boolean)    allow duplicates
     }
 
 }

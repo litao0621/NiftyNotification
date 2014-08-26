@@ -282,13 +282,16 @@ public class NiftyNotificationView {
 
     public void show() {
 
-        Manager.getInstance().add(this);
-
+        show(false);
     }
+    public void show(boolean isRepeat) {
+
+        Manager.getInstance().add(this,isRepeat);
+    }
+
     public void hide() {
 
         Manager.getInstance().removeNotify(this);
-
     }
 
 
