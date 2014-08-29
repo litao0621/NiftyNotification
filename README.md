@@ -1,7 +1,7 @@
-NiftyNotification
-=================
+#NiftyNotification [![Build Status](https://api.travis-ci.org/sd6352051/NiftyNotification.svg?branch=master)](https://travis-ci.org/sd6352051/NiftyNotification)
 
 effects for android notifications.base on ([Crouton][1])
+
 
 
 # ScreenShot
