@@ -29,6 +29,27 @@ before_install:
   - echo yes | android update sdk --filter extra-android-support --no-ui --force > /dev/null
   - echo yes | android update sdk --filter extra-android-m2repository --no-ui --force > /dev/null
 
+before_install:
+  - curl -3L https://raw.github.com/embarkmobile/android-sdk-installer/version-2/android-sdk-installer | bash /dev/stdin --install=$COMPONENTS,android-$ANDROID_TARGET,sys-img-armeabi-v7a-android-$ANDROID_TARGET --accept=$LICENSES && source ~/.android-sdk-installer/env
+  - curl -3L -o wait_for_emulator https://github.com/embarkmobile/android-sdk-installer/raw/version-2/wait_for_emulator
+  - sudo chmod +x wait_for_emulator
+
+  # Start the emulator
+  - echo no | android create avd --force -n test -t android-$ANDROID_TARGET --abi armeabi-v7a
+  - emulator -avd test -no-audio -no-window &
+
+before_script:
+  # Downloads gradle stuff
+  - gradle
+  - ./wait_for_emulator
+
 install:
  - true
+
+script:
+  - gradle connectedCheck --info
+
+
+notifications:
+  email: false
 
