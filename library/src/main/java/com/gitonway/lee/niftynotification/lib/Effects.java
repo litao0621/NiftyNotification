@@ -33,6 +33,7 @@ public enum Effects {
     thumbSlider(ThumbSlider.class),
     scale(Scale.class);
 
+
     private Class<? extends BaseEffect> effectsClazz;
 
     private Effects(Class<? extends BaseEffect> mclass) {
