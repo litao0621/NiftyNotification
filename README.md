@@ -55,14 +55,14 @@ NiftyNotificationView.build(this,msg, effect,R.id.mLyout,cfg)
       //add your code
       }
       })
-      .show();
+      .show();                               //  show(boolean) allow duplicates   or showSticky() sticky notification,you can call removeSticky() method close it
 
 ```
 
 and copy this into your `libs` directory.
 -   [`NineOldAndroid-2.4.0`](https://github.com/downloads/JakeWharton/NineOldAndroids/nineoldandroids-2.4.0.jar)
 
--   [`NiftyNotification-1.0`](https://github.com/sd6352051/NiftyNotification/blob/master/releases/niftynotification-1.0.jar?raw=true)
+-   [`NiftyNotification-1.1`](https://github.com/sd6352051/NiftyNotification/blob/master/releases/niftynotification-1.1.jar?raw=true)
 
   
 # Effects
