@@ -65,7 +65,7 @@ public class MainActivity extends Activity {
 //                        //add your code
 //                    }
 //                })
-//                .show();                               //  show(boolean)    allow duplicates
+//                .show();                               //  show(boolean) allow duplicates   or showSticky() sticky notification,you can call removeSticky() method close it
     }
 
 }

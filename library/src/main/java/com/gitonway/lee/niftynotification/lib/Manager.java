@@ -46,6 +46,8 @@ public class Manager extends Handler {
 
     private final Queue<NiftyNotificationView> notifyQueue;
 
+    private boolean isSticky=false;
+
     private Manager() {
         notifyQueue = new LinkedBlockingQueue<NiftyNotificationView>();
     }
@@ -57,12 +59,28 @@ public class Manager extends Handler {
         return INSTANCE;
     }
 
-    void add(NiftyNotificationView crouton,boolean isRepeat ) {
-        if (notifyQueue.size() < 1||isRepeat) {
+    void add(NiftyNotificationView crouton,boolean repeat ) {
+        if (notifyQueue.size() < 1||repeat) {
             notifyQueue.add(crouton);
-            displayNotify();
+            displayNotify(false);
         }
 
+    }
+    void addSticky(NiftyNotificationView crouton) {
+        if (notifyQueue.size() < 1) {
+            notifyQueue.add(crouton);
+            displayNotify(true);
+        }
+
+    }
+    void removeSticky(){
+
+        NiftyNotificationView notify = notifyQueue.poll();
+        if(notify!=null) {
+            sendMessageDelayed(notify, Messages.REMOVE_NOTIFICATION,
+                    0
+            );
+        }
     }
 
     private long calculateCroutonDuration(NiftyNotificationView notify) {
@@ -91,7 +109,7 @@ public class Manager extends Handler {
         }
         switch (msg.what) {
             case Messages.DISPLAY_NOTIFICATION: {
-                displayNotify();
+                displayNotify(false);
                 break;
             }
 
@@ -121,10 +139,13 @@ public class Manager extends Handler {
     }
 
 
-    private void displayNotify() {
+    private void displayNotify(boolean sticky) {
+
         if (notifyQueue.isEmpty()) {
             return;
         }
+
+        isSticky=sticky;
 
         final NiftyNotificationView currentNotify = notifyQueue.peek();
 
@@ -183,9 +204,12 @@ public class Manager extends Handler {
                     }
 
                     notify.getEffects().getAnimator().setDuration(notify.getConfiguration().animDuration).in(notify.getView());
-                    sendMessageDelayed(notify, Messages.REMOVE_NOTIFICATION,
-                            notify.getDispalyDuration()
-                                    + notify.getInDuration());
+                    if(!isSticky){
+                        sendMessageDelayed(notify, Messages.REMOVE_NOTIFICATION,
+                                notify.getDispalyDuration()
+                                        + notify.getInDuration());
+                    }
+
                 }
             });
         }

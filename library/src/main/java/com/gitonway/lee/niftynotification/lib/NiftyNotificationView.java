@@ -282,11 +282,20 @@ public class NiftyNotificationView {
 
     public void show() {
 
-        show(false);
+        show(true);
     }
-    public void show(boolean isRepeat) {
+    public void show(boolean repeat) {
 
-        Manager.getInstance().add(this,isRepeat);
+        Manager.getInstance().add(this,repeat);
+    }
+
+    public void showSticky() {
+
+        Manager.getInstance().addSticky(this);
+    }
+    //only remove sticky notification
+    public void removeSticky(){
+        Manager.getInstance().removeSticky();
     }
 
     public void hide() {
