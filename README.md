@@ -62,7 +62,7 @@ NiftyNotificationView.build(this,msg, effect,R.id.mLyout,cfg)
 and copy this into your `libs` directory.
 -   [`NineOldAndroid-2.4.0`](https://github.com/downloads/JakeWharton/NineOldAndroids/nineoldandroids-2.4.0.jar)
 
--   [`NiftyNotification-1.1`](https://github.com/sd6352051/NiftyNotification/blob/master/releases/niftynotification-1.2.jar?raw=true)
+-   [`NiftyNotification-1.2`](https://github.com/sd6352051/NiftyNotification/blob/master/releases/niftynotification-1.2.jar?raw=true)
 
   
 # Effects
