@@ -22,6 +22,7 @@ import android.content.res.Configuration;
 import android.os.Build;
 import android.os.Handler;
 import android.os.Message;
+import android.util.Log;
 import android.view.View;
 import android.view.ViewGroup;
 import android.view.ViewTreeObserver;
@@ -67,6 +68,12 @@ public class Manager extends Handler {
 
     }
     void addSticky(NiftyNotificationView crouton) {
+        Log.i("count",crouton.getViewGroup().getChildCount()+"   "+notifyQueue.size());
+
+        if (crouton.getViewGroup().getChildCount()==0&&notifyQueue.size()==1){
+            removeSticky();
+        }
+
         if (notifyQueue.size() < 1) {
             notifyQueue.add(crouton);
             displayNotify(true);
@@ -74,8 +81,7 @@ public class Manager extends Handler {
 
     }
     void removeSticky(){
-
-        NiftyNotificationView notify = notifyQueue.poll();
+        NiftyNotificationView notify = notifyQueue.peek();
         if(notify!=null) {
             sendMessageDelayed(notify, Messages.REMOVE_NOTIFICATION,
                     0

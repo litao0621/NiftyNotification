@@ -154,11 +154,13 @@ public class NiftyNotificationView {
     }
 
     private void initializeNotifyView() {
+        if (this.activity!=null) {
 
-        this.notifyView = initializeCroutonViewGroup();
+            this.notifyView = initializeCroutonViewGroup();
 
-        RelativeLayout contentView = initializeContentView();
-        this.notifyView.addView(contentView);
+            RelativeLayout contentView = initializeContentView();
+            this.notifyView.addView(contentView);
+        }
     }
 
     private FrameLayout initializeCroutonViewGroup() {
