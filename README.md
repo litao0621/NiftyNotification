@@ -4,7 +4,7 @@ effects for android notifications.base on ([Crouton][1])
 
 [![Android Arsenal](http://img.shields.io/badge/%20%20%20Android%20%20Arsenal%20%20%20-%20%20%20NiftyNotification%20%20%20-blue.svg)](http://android-arsenal.com/details/1/888)
 [![Build Status](https://api.travis-ci.org/sd6352051/NiftyNotification.svg?branch=master)](https://travis-ci.org/sd6352051/NiftyNotification)
-
+[![JitPack Maven](https://img.shields.io/github/tag/sd6352051/NiftyNotification.svg?label=JitPack%20Maven)](https://jitpack.io/#sd6352051/NiftyNotification)
 
 # ScreenShot
 
@@ -59,7 +59,21 @@ NiftyNotificationView.build(this,msg, effect,R.id.mLyout,cfg)
 
 ```
 
-and copy this into your `libs` directory.
+# Install
+
+You can install using Gradle from [JitPack](https://jitpack.io/#sd6352051/NiftyNotification). Add this to your build.gradle file:
+
+```gradle
+	repositories {
+	    maven { url "https://jitpack.io" }
+	}
+	
+	dependencies {
+	    compile 'com.github.sd6352051:NiftyNotification:1.2'
+	}
+```
+
+Or copy this into your `libs` directory.
 -   [`NineOldAndroid-2.4.0`](https://github.com/downloads/JakeWharton/NineOldAndroids/nineoldandroids-2.4.0.jar)
 
 -   [`NiftyNotification-1.2`](https://github.com/sd6352051/NiftyNotification/blob/master/releases/niftynotification-1.2.jar?raw=true)
