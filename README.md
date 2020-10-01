@@ -1,4 +1,4 @@
-#NiftyNotification 
+#NiftyNotifier 
 
 effects for android notifications.base on ([Crouton][1])
 
